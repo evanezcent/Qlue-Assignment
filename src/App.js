@@ -1,12 +1,20 @@
-import logo from './logo.svg';
-// import './App.css';
-import { Home } from './pages/home';
+import { Home } from "./pages/home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Profile } from "./pages/profile";
+import { DataProvider } from "./context/data";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <DataProvider>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile/:name" element={<Profile />} />
+          </Routes>
+        </div>
+      </DataProvider>
+    </Router>
   );
 }
 
