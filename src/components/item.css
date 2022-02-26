@@ -1,0 +1,17 @@
+.info { 
+  margin-top: 2px;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+
+.item__box {
+  flex: 0 0 calc(50% - 45px);
+  text-align: center;
+  background-color: cadetblue;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}

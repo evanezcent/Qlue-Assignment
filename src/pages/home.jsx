@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Item } from "../components/item";
 import response from "../data/data";
 import { restructureData } from "../utils/utility";
 
@@ -13,34 +14,17 @@ export const Home = () => {
     }
   }, []);
 
-  const itemStyle = {
-    textAlign: "left",
-    marginBottom: "1.5rem",
-  };
-
-  const textStyle = {
-    marginBottom: "2px",
-    marginTop: "2px",
-    lineHeight: "120%",
-    textTransform: "capitalize",
-  };
+  const parentStyle = {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  }; 
 
   return (
     <>
-      {data.map((item, key) => {
-        return (
-          <div key={key} style={itemStyle}>
-            <h2 style={textStyle}>{item.full_name}</h2>
-            <h2 style={textStyle}>
-              {item.expert_skills.length === 0
-                ? "-"
-                : item.expert_skills.map(
-                    (item2, idx) => (idx == 0 ? "" : ", ") + item2
-                  )}
-            </h2>
-          </div>
-        );
-      })}
+      <div style={parentStyle}>
+        <Item data={data} />
+      </div>
     </>
   );
 };
