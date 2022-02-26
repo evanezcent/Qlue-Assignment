@@ -6,7 +6,7 @@ export const Profile = () => {
   const { data_provider } = useContextData();
   const { name } = useParams();
   const profile = data_provider?.find(
-    (element) => element.full_name.toLowerCase() > name.toLowerCase()
+    (element) => element.full_name.toLowerCase() === name.toLowerCase()
   );
 
   return (
