@@ -4,6 +4,7 @@ const parseObject = (data) => {
   let res = [];
 
   if (Object.keys(data).length > 0) {
+    // if skills is EXPERT then push into array
     Object.keys(data).map(
       (key) => isExpert(data[key]) || res.push(key.toString())
     );
