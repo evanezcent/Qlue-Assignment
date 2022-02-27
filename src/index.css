@@ -70,3 +70,14 @@ p {
 .mb-6 {
   margin-bottom: 6rem;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}

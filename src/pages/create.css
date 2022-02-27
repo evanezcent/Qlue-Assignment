@@ -1,0 +1,27 @@
+.input__name {
+  background-color: #ffe3b9;
+  border: 1px solid #ffe3b9;
+  border-radius: 5px;
+  padding: 6px;
+}
+.input__name:focus-visible {
+  border: none;
+  outline: none;
+  border: 1px solid #ffe3b9;
+}
+
+.btn__submit {
+  background-color: black;
+  box-shadow: 0 0 6px #ffdba5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 3px 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.box__form {
+  width: 200px;
+}
